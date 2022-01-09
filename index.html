@@ -5,21 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./app.js" defer></script>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <title>AMR Personal Portfolio</title>
   </head>
   <body>
     <div class="main-wrapper">
       <header class="main-header">
         <div class="main-header-one">
-          <h1 class="brand-name header-one-animation">Hi, I am <br> Adrean!</h1>
+          <h1 class="brand-name header-one-animation">
+            Hi, I am <br />
+            Adrean!
+          </h1>
 
           <div class="brand-image-wrapper">
             <img src="./src/images/5172658.jpg" alt="" class="brand-image" />
           </div>
 
           <div class="stamp-wrapper">
-            <img src="./src/images/stamp.svg" alt="" class="stamp" />
+            <img src="./src/images/stamp.svg" alt="" class="stamp" id="stamp" />
           </div>
         </div>
 
@@ -31,7 +34,7 @@
           </h1>
 
           <p class="introduction-content header-two-animation">
-            This is my personal space where I'm trying to express my creativity.
+            This is my personal space where I'm happy to express my creativity.
             Always passionate about creating beautiful & useful things ✨
           </p>
 
@@ -56,6 +59,10 @@
             <li class="main-nav-li">
               <a href="" class="main-nav-link crossed"> Contact </a>
             </li>
+
+            <li class="main-nav-li">
+              <a href="" class="main-nav-link crossed"> Blog </a>
+            </li>
           </ul>
         </nav>
 
@@ -63,30 +70,100 @@
           <span class="nav-span short"></span>
           <span class="nav-span large"></span>
           <span class="nav-span middle"></span>
-          
+
           <div class="mobile-nav-menu non-active" id="mobile-nav-menu">
             <ul class="mobile-nav-ul">
               <li class="mobile-nav-li">
-                <a href="" class="mobile-nav-link crossed">
-                  Home
-                </a>
+                <a href="" class="mobile-nav-link crossed"> Home </a>
               </li>
 
               <li class="mobile-nav-li">
-                <a href="" class="mobile-nav-link crossed">
-                  Portfolio
-                </a>
+                <a href="" class="mobile-nav-link crossed"> Portfolio </a>
               </li>
 
               <li class="mobile-nav-li">
-                <a href="" class="mobile-nav-link crossed">
-                  Contact
-                </a>
+                <a href="" class="mobile-nav-link crossed"> Contact </a>
+              </li>
+
+              <li class="mobile-nav-li">
+                <a href="" class="mobile-nav-link crossed"> Blog </a>
               </li>
             </ul>
           </div>
         </nav>
       </header>
+
+      <footer class="main-footer">
+        <div class="social-contacts-wrapper">
+          <img src="./src/images/arrow.svg" alt="" class="know-me" />
+          <div class="social-contacts">
+            <div class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+
+            <div class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </div>
+
+            <div class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </div>
+
+            <div class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+
+            <div class="social-icon">
+              <i class="fab fa-skype"></i>
+            </div>
+          </div>
+        </div>
+
+        <section class="expertises">
+          <p class="experise-title">— EXPERTISE</p>
+
+          <div class="expertise-content-wrapper">
+            <div class="expertise-content-section">
+              <div class="expertise-content">
+                <div class="expertise-number">01</div>
+                <div class="expertise">Web Design</div>
+              </div>
+
+              <div class="expertise-content">
+                <div class="expertise-number">02</div>
+                <div class="expertise">Front-end Development</div>
+              </div>
+
+              <div class="expertise-content">
+                <div class="expertise-number">03</div>
+                <div class="expertise">Back-end Development</div>
+              </div>
+            </div>
+
+            <div class="expertise-content-section">
+              <div class="expertise-content">
+                <div class="expertise-number">04</div>
+                <div class="expertise">Web Page Maintenance</div>
+              </div>
+
+              <div class="expertise-content">
+                <div class="expertise-number">05</div>
+                <div class="expertise">Data Analysis</div>
+              </div>
+
+              <div class="expertise-content">
+                <div class="expertise-number">06</div>
+                <div class="expertise">Data Base Management</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="credit">
+          <p>© 2022 — Design & Develop by A.M.R. Garsia</p>
+          <p>Thanks for scrolling, that's all folks. (under construction)</p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

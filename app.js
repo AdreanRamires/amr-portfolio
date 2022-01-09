@@ -1,5 +1,6 @@
 const mobileNav = document.getElementById('mobile-nav');
 const mobileNavMenu = document.getElementById('mobile-nav-menu');
+const stamp = document.getElementById('stamp');
 
 const openCloseMenu = (event) => {
 
@@ -16,3 +17,10 @@ const openCloseMenu = (event) => {
 }
 
 mobileNav.addEventListener('click', openCloseMenu);
+
+
+window.addEventListener("scroll", rotateStamp);
+
+function rotateStamp() {
+  stamp.style.transform = "rotate(" + window.pageYOffset / 2 + "deg)";  
+}

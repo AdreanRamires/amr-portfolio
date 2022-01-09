@@ -7,6 +7,7 @@
   color: white;
   text-decoration: none;
   list-style-type: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -159,6 +160,7 @@ body {
 
 .introduction-content {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   margin-bottom: 40px;
   font-size: 16px;
@@ -166,6 +168,13 @@ body {
   font-weight: 400;
   margin-top: 0;
   -webkit-animation-delay: 350ms;
+}
+
+.quote {
+  margin: 30px 0 0 10px;
+  color: #8d8d8f;
+  font-size: 12px;
+  letter-spacing: 3px;
 }
 
 .introduction-project-talk {
@@ -561,7 +570,7 @@ ul > li:first-child > a {
   .expertises {
     padding: 10px;
   }
-  
+
   .expertise-content-wrapper {
     flex-direction: column;
   }
@@ -620,4 +629,3 @@ ul > li:first-child > a {
     height: 100px;
   }
 }
-

@@ -15,6 +15,7 @@ body {
 }
 
 .main-wrapper {
+  position: relative;
   width: 100%;
 }
 
@@ -36,11 +37,34 @@ body {
   width: 36%;
 }
 
+.header-one-animation {
+  position: relative;
+  top: -80px;
+  opacity: 0;
+  -webkit-animation-name: "header-one-animation";
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-duration: 600ms;
+}
+
 .brand-name {
   font-size: 72px;
   line-height: 72px;
   margin-left: 50px;
   margin-top: 0;
+  -webkit-animation-duration: 600ms;
+  -webkit-animation-delay: 200ms;
+  text-indent: -30px;
+}
+
+@keyframes header-one-animation {
+  0% {
+    opacity: 0;
+    top: -80px;
+  }
+  100% {
+    opacity: 1;
+    top: 50px;
+  }
 }
 
 .brand-image-wrapper {
@@ -48,7 +72,22 @@ body {
   z-index: -1;
   width: 370px;
   height: 130%;
-  top: -30%;
+  top: -60%;
+  opacity: 0;
+  -webkit-animation-name: "brand-image-wrapper";
+  -webkit-animation-duration: 600ms;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes brand-image-wrapper {
+  0% {
+    top: -60%;
+    opacity: 0;
+  }
+  100% {
+    top: -30%;
+    opacity: 1;
+  }
 }
 
 .brand-image {
@@ -65,14 +104,40 @@ body {
   right: 20px;
   width: 150px;
   height: 150px;
+  -webkit-animation-name: "stamp-wrapper";
+  -webkit-animation-duration: 600ms;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-delay: 800ms;
+  opacity: 0;
+}
+
+@-webkit-keyframes stamp-wrapper {
+  0% {
+    opacity: 0;
+    transform: scale(2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* MAIN HEADER TWO */
 
 .main-header-two {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 36%;
+}
+
+.header-two-animation {
+  position: relative;
+  top: -100px;
+  opacity: 0;
+  -webkit-animation-name: "header-two-animation";
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-duration: 600ms;
 }
 
 .introduction {
@@ -80,6 +145,7 @@ body {
   color: #8d8d8f;
   font-size: 14px;
   letter-spacing: 3px;
+  -webkit-animation-delay: 250ms;
 }
 
 .introduction-header {
@@ -88,6 +154,7 @@ body {
   margin-top: 0;
   margin-bottom: 30px;
   font-weight: 600;
+  -webkit-animation-delay: 300ms;
 }
 
 .introduction-content {
@@ -98,6 +165,7 @@ body {
   line-height: 32px;
   font-weight: 400;
   margin-top: 0;
+  -webkit-animation-delay: 350ms;
 }
 
 .introduction-project-talk {
@@ -107,6 +175,18 @@ body {
   line-height: 32px;
   font-weight: 600;
   margin: 0;
+  -webkit-animation-delay: 400ms;
+}
+
+@-webkit-keyframes header-two-animation {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 .project,
@@ -131,11 +211,257 @@ ul > li:first-child > a {
   font-weight: 600;
   line-height: 55px;
   text-align: right;
+  -webkit-animation-delay: 400ms;
 }
 
-.main-nav-ul {
+.main-nav-ul,
+.mobile-nav-ul {
   margin: 0;
   padding: 0;
 }
 
-/*  */
+.crossed:hover {
+  color: #e72484;
+  text-decoration: line-through;
+}
+
+/* MOBILE NAV */
+
+.mobile-nav {
+  position: absolute;
+  top: 30px;
+  right: 5%;
+  display: none;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.nav-span {
+  height: 3px;
+  background: white;
+  margin: 3px;
+}
+
+.short {
+  width: 13px;
+}
+
+.large {
+  width: 28px;
+}
+
+.middle {
+  width: 23px;
+}
+
+.mobile-nav-menu {
+  display: none;
+  margin-top: 20px;
+  font-size: 24px;
+  background: white;
+  padding: 30px 40px;
+  line-height: 50px;
+}
+
+.mobile-nav-link {
+  color: black;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 1440px) {
+  .main-header {
+    max-width: 940px;
+  }
+
+  .brand-name {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .brand-image-wrapper {
+    width: 320px;
+  }
+
+  .introduction {
+    font-size: 14px;
+  }
+
+  .introduction-header {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .introduction-content {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .introduction-project-talk {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .main-nav {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .stamp-wrapper {
+    width: 120px;
+    height: 120px;
+    top: 265px;
+    left: 237px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .main-header {
+    max-width: 728px;
+    justify-content: space-between;
+  }
+
+  .main-header-one {
+    width: 30%;
+  }
+
+  .main-header-two {
+    width: 50%;
+  }
+
+  .brand-name {
+    font-size: 42px;
+    line-height: 40px;
+  }
+
+  .brand-image-wrapper {
+    width: 270px;
+    height: 110%;
+  }
+  .stamp-wrapper {
+    top: 225px;
+    right: -30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-wrapper {
+    padding: 0 20px;
+  }
+
+  .main-header {
+    display: flex;
+    flex-direction: column;
+    max-width: 728px;
+    justify-content: space-between;
+  }
+
+  .brand-name {
+    font-size: 56px;
+    line-height: 56px;
+  }
+
+  @keyframes header-one-animation {
+    0% {
+      opacity: 0;
+      top: -80px;
+    }
+    100% {
+      opacity: 1;
+      top: 0px;
+    }
+  }
+
+  .brand-image-wrapper {
+    width: 310px;
+    top: -250%;
+  }
+
+  @-webkit-keyframes brand-image-wrapper {
+    0% {
+      top: -250%;
+      opacity: 0;
+    }
+    100% {
+      top: -150%;
+      opacity: 1;
+    }
+  }
+
+  .brand-image {
+    height: 450px;
+  }
+
+  .stamp-wrapper {
+    position: absolute;
+    top: 145px;
+    left: 240px;
+  }
+
+  .main-header-two {
+    width: 100%;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .main-wrapper {
+    padding: 0 20px;
+  }
+
+  .main-header {
+    max-width: 100%;
+  }
+
+  .brand-image-wrapper {
+    width: 220px;
+    top: -380%;
+  }
+
+  @-webkit-keyframes brand-image-wrapper {
+    0% {
+      top: -380%;
+      opacity: 0;
+    }
+    100% {
+      top: -280%;
+      opacity: 1;
+    }
+  }
+
+  .brand-name {
+    font-size: 38px;
+    line-height: 38px;
+    top: -100px;
+  }
+
+  @keyframes header-one-animation {
+    0% {
+      opacity: 0;
+      top: -100px;
+    }
+    100% {
+      opacity: 1;
+      top: -30px;
+    }
+  }
+  
+
+  .stamp-wrapper {
+    position: absolute;
+    top: 95px;
+    left: 165px;
+  }
+
+  .stamp {
+    width: 100px;
+    height: 100px;
+  }
+}
